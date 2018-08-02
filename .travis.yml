@@ -10,7 +10,7 @@ services:
 env:
   global:
     - COMMIT=${TRAVIS_COMMIT::8}
-    - REPO=dockerframework/ansible:16.04py3
+    - REPO=dockerframework/ansible:latest
     - CGO_ENABLED=0
     - GOOS=linux
     - GOARCH=amd64
