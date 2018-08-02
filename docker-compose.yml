@@ -1,0 +1,22 @@
+version: '3.2'
+
+services:
+
+#================================================================================================
+# ANSIBLE
+#================================================================================================
+  ansible:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "9500:3000"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /data/sys/fs/cgroup:/sys/fs/cgroup
+      - /data/run/lock:/run/lock 
+      - /data/run:/run
+      - /data/tmp:/tmp
+    environment:
+      - ANSIBLE_VERSION=ubuntu1404
+    
