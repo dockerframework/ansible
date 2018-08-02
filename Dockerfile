@@ -1,4 +1,4 @@
-ARG ANSIBLE_VERSION=ubuntu1604
+ARG ANSIBLE_VERSION=ubuntu1604py3
 FROM ansible/ansible:${ANSIBLE_VERSION}
 
 # ================================================================================================

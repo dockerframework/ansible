@@ -18,5 +18,5 @@ services:
       - /data/run:/run
       - /data/tmp:/tmp
     environment:
-      - ANSIBLE_VERSION=ubuntu1604
+      - ANSIBLE_VERSION=ubuntu1604py3
     
