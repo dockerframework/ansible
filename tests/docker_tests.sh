@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOCKER_IMAGE="dockerframework/ansible"
-DOCKER_TAG="14.04"
+DOCKER_TAG="16.04"
 
 #### Halt script on error
 set -e
