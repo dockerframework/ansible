@@ -34,7 +34,9 @@ RUN ssh-keygen -y -q -t rsa -N '' -f /root/.ssh/id_rsa \
 
 VOLUME /sys/fs/cgroup /run/lock /run /tmp
 
-# RUN pip install coverage junit-xml
+RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
+    && python get-pip.py \
+    && pip install coverage junit-xml
 
 ENV container=docker
 
