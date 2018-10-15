@@ -28,7 +28,7 @@ RUN apt-get update \
 RUN apt-add-repository ppa:ansible/ansible \
     && apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" install ansible
 
-RUN ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa \
+RUN ssh-keygen -y -t rsa -N "" -f /root/.ssh/id_rsa \
     && cp /root/.ssh/id_rsa.pub /root/.ssh/authorized_keys \
     && for key in /etc/ssh/ssh_host_*_key.pub; do echo "localhost $(cat ${key})" >> /root/.ssh/known_hosts; done
 
